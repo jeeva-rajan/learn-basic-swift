@@ -26,14 +26,15 @@ func findOddOrEven(anynum num: Int){
 func sum(arrayA: [Int]){
     var sumOfArray = 0
     for i in arrayA{
-        sumOfArray = sumOfArray + i
+        sumOfArray = sumOfArray + i    
     }
-    print("The Given Array's Sum of Value :\(sumOfArray)")
+    print("The Given Array's Sum of Value : \(sumOfArray)")
     let lengthOfArray = arrayA.count
     let averageOfGivenArray = (sumOfArray / lengthOfArray)
-    print("The Average of Given Array :\(averageOfGivenArray)")
+    print("The Average of Given Array : \(averageOfGivenArray)")
 }
 
+// sum(arrayA: [3,6,8,2,5,9])
 
 func palindromeOrNot(input: Any) -> String{
     print(input)
