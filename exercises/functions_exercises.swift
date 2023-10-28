@@ -12,7 +12,7 @@ func multiplyTwoNUmbers(firstNum: Int, secondNum: Int) -> String{
 
 // print(multiplyTwoNUmbers(firstNum: 10, secondNum: 10))
 
-func findOddOrEven(_ num: Int){
+func findOddOrEven(anynum num: Int){
     let findMe = num % 2
     if findMe == 0{
         print("The Number \(num) is Even")
@@ -21,7 +21,7 @@ func findOddOrEven(_ num: Int){
     }
 }
 
-// findOddOrEven(11.5)
+// findOddOrEven(anynum: 11)
 
 func sum(arrayA: [Int]){
     var sumOfArray = 0
