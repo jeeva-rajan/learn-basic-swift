@@ -29,7 +29,7 @@ func sum(arrayA: [Int]){
     print("The Average of Given Array :\(averageOfGivenArray)")
 }
 
-
+// Logesh here
 //print("The Given two Numbers adition value: \(addition(firstNum: 34,secondNum: 12))")
 //print("The Given two Numbers multiplication value: \(multiplication(firstNum: 34,secondNum: 12))")
 //oddOrEven(num: 4)
