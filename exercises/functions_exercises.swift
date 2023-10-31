@@ -22,26 +22,45 @@ func findOddOrEven(anynum num: Int){
 }
 
 // findOddOrEven(anynum: 11)
-
-func sum(arrayA: [Int]){
+// Find Total and Average for given array and return dictionary contains total and average
+func findTotalAndAverage(inputArray: [Int]) -> [String: Int]{
     var sumOfArray = 0
-    for i in arrayA{
+    var result = [String: Int]()
+    for i in inputArray{
         sumOfArray = sumOfArray + i    
     }
-    print("The Given Array's Sum of Value : \(sumOfArray)")
-    let lengthOfArray = arrayA.count
+    
+    let lengthOfArray = inputArray.count
     let averageOfGivenArray = (sumOfArray / lengthOfArray)
-    print("The Average of Given Array : \(averageOfGivenArray)")
+    result["Total"] = sumOfArray
+    result["average"] = averageOfGivenArray
+    return result
 }
 
-// sum(arrayA: [3,6,8,2,5,9])
-
-func palindromeOrNot(input: Any) -> String{
-    print(input)
-    return input as! String
+// print(findTotalAndAverage(inputArray: [3,6,8,2,5,9]))
+func findMaximum(input: [Int]) -> Any{
+    var maximumNum = 0
+    for i in input{
+        if i > maximumNum{
+            maximumNum = i
+        }
+    }
+    return "Maximum number of the given array is : \(maximumNum)"
 }
 
+// print(findMaximum(input: [4,16,2,877,3]))
 
+func findMinimum(input: [Int]) -> Any{
+    var minimumNum = input[0]
+    for i in input{
+        if i < minimumNum{
+           minimumNum = i
+        }
+    }
+    return "Maximum number of the given array is : \(minimumNum)"
+}
+
+// print(findMinimum(input: [4,7,0,5,9,1]))
 
 
 
