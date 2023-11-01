@@ -57,11 +57,34 @@ func findMinimum(input: [Int]) -> Any{
            minimumNum = i
         }
     }
-    return "Maximum number of the given array is : \(minimumNum)"
+    return "Minimum number of the given array is : \(minimumNum)"
 }
 
-// print(findMinimum(input: [4,7,0,5,9,1]))
+// print(findMinimum(input: [4,7,3,5,9,1]))
 
+func findPalindromeOrNot(input: Int){
+    var number = input
+    var reverseNumber = 0
+    while number > 0 {
+        let reminder = number % 10
+        // print(reminder)
+        // print(reverseNumber)
+        reverseNumber = reverseNumber * 10 + reminder
+        // print(reverseNumber)
+        number = number / 10
+    }
 
+    if(reverseNumber == input){
+        print("The Number \(input) is a Palindrome ")
+    }else{
+        print("The Number \(input) is not a Palindrome ")
+    }    
+}
+
+// findPalindromeOrNot(input: 123)
+
+// palindrome or not - string
+// combaine the max,min,sum,average - result [:]
+// class examples 
 
 
