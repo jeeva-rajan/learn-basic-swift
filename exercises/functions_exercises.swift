@@ -83,8 +83,77 @@ func findPalindromeOrNot(input: Int){
 
 // findPalindromeOrNot(input: 123)
 
-// palindrome or not - string
-// combaine the max,min,sum,average - result [:]
-// class examples 
+func findPalindromeOrNotinString(input: String){
+    let lowercasedstring = input.lowercased()
+    // print(lowercasedstring)
+    let reveredstring = String(lowercasedstring.reversed())
+    // print(reveredstring)
 
+    if reveredstring == lowercasedstring{
+        print("The Given \(input) is a palindrome")
+    }else{
+        print("The Given \(input) is  not a palindrome")
+    }
+}
+
+// findPalindromeOrNotinString(input: "mAdam")
+
+func findCalculation(input: [Int]) -> [String: Int]{
+    var maximumNum = 0
+    var minimumNum = input[0]
+    var sumOfArray = 0
+    var result = [String: Int]()
+    for i in input{
+        sumOfArray = sumOfArray + i
+        if i > maximumNum{
+            maximumNum = i
+        }else if i < minimumNum{
+           minimumNum = i
+        }
+    }
+    let lengthOfArray = input.count
+    let averageOfGivenArray = (sumOfArray / lengthOfArray)
+    result["Maximun"] = maximumNum
+    result["Minimum"] = minimumNum
+    result["Total"] = sumOfArray
+    result["Average"] = averageOfGivenArray
+    return result    
+}
+// print(findCalculation(input: [2,4,1,3,64]))
+
+class Student{
+    let studentName: String
+    let studentID: Int
+    let studentSchoolName: String = "Government High School"
+    var sub1: Int!
+    var sub2: Int!
+    var sub3: Int = 75
+    var sum: Int!
+    var average: Int!
+    var result = [String: Int]()
+
+    init(name: String, id: Int, sub2: Int){
+        studentName = name
+        studentID  = id
+        self.sub2 = sub2
+    }
+
+    func markCalculation()  -> [String: Int]{
+        sum = (sub1 + sub2 + sub3)
+        average = (sum / 3)
+        result["Total mark of 3 subject's"] = sum
+        result["Average mark"] = average
+        return result
+    } 
+}
+
+var objOfStudent = Student(name: "Jeeva", id: 12, sub2: 75)
+objOfStudent.sub1 = 75
+print("Student Name : \(objOfStudent.studentName)")
+print("Student ID Number : \(objOfStudent.studentID)")
+print(objOfStudent.markCalculation())
+
+
+
+ 
 
