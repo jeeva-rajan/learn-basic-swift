@@ -1,26 +1,49 @@
-protocol ExampleProtocol {
-     var simpleDescription: String { get }
-     mutating func adjust()
+protocol Device {
+    var name: String { get }
+    var cost: Int { get }
+    var color: String { get }
+    mutating func message()
 }
 
-class SimpleClass: ExampleProtocol {
-     var simpleDescription: String = "A very simple class."
-     var anotherProperty: Int = 69105
-     func adjust() {
-          simpleDescription += "  Now 100% adjusted."
-     }
-}
-var a = SimpleClass()
-a.adjust()
-let aDescription = a.simpleDescription
+class Phone: Device {
+    var name: String = " All The Phone Models"
+    var cost: Int =  50000
+    var color: String = "White" 
 
-
-struct SimpleStructure: ExampleProtocol {
-     var simpleDescription: String = "A simple structure"
-     mutating func adjust() {
-          simpleDescription += " (adjusted)"
-     }
+    func message(){
+        print("This is the function from Phone")
+    }
 }
-var b = SimpleStructure()
-b.adjust()
-let bDescription = b.simpleDescription
+
+class Refridgerator: Device{
+    let name: String = "LX"
+    var cost: Int =  10000
+    var length: Int = 20
+    var width: Int = 10
+    var color: String = "purple with white"
+
+    func message(){
+        print("This is the function from Refridgerator")
+    }
+}
+
+class Iphone: Phone {
+    // var name: String = "iPhone14"
+    // var cost: Int = 40000
+    // var color: String = "Black"
+
+    override func message(){
+        print("This is the function from Subclass iPhone")
+    }
+}
+
+var objphone = Phone()
+var objrefridge = Refridgerator()
+var objiphone = Iphone()
+objphone.message()
+objrefridge.message()
+objiphone.message()
+print("refridge length : \(objrefridge.length)")
+objiphone.name = "iPhone"
+print(objiphone.name)
+
