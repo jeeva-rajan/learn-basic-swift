@@ -121,39 +121,36 @@ func findCalculation(input: [Int]) -> [String: Int]{
 }
 // print(findCalculation(input: [2,4,1,3,64]))
 
-class Student{
-    let studentName: String
-    let studentID: Int
-    let studentSchoolName: String = "Government High School"
-    var sub1: Int!
-    var sub2: Int!
-    var sub3: Int = 75
-    var sum: Int!
-    var average: Int!
-    var result = [String: Int]()
+// class Student{
+//     let studentName: String
+//     let studentID: Int
+//     let studentSchoolName: String = "Government High School"
+//     var sub1: Int!
+//     var sub2: Int!
+//     var sub3: Int = 75
+//     var sum: Int!
+//     var average: Int!
+//     var result = [String: Int]()
 
-    init(name: String, id: Int, sub2: Int){
-        studentName = name
-        studentID  = id
-        self.sub2 = sub2
-    }
+//     init(name: String, id: Int, sub2: Int){
+//         studentName = name
+//         studentID  = id
+//         self.sub2 = sub2
+//     }
 
-    func markCalculation()  -> [String: Int]{
-        sum = (sub1 + sub2 + sub3)
-        average = (sum / 3)
-        result["Total mark of 3 subject's"] = sum
-        result["Average mark"] = average
-        return result
-    } 
-}
+//     func markCalculation()  -> [String: Int]{
+//         sum = (sub1 + sub2 + sub3)
+//         average = (sum / 3)
+//         result["Total mark of 3 subject's"] = sum
+//         result["Average mark"] = average
+//         return result
+//     } 
+// }
 
-var objOfStudent = Student(name: "Jeeva", id: 12, sub2: 75)
-objOfStudent.sub1 = 75
-print("Student Name : \(objOfStudent.studentName)")
-print("Student ID Number : \(objOfStudent.studentID)")
-print(objOfStudent.markCalculation())
-
-
+// var objOfStudent = Student(name: "Jeeva", id: 12, sub2: 75)
+// objOfStudent.sub1 = 75
+// print("Student Name : \(objOfStudent.studentName)")
+// print("Student ID Number : \(objOfStudent.studentID)")
+// print(objOfStudent.markCalculation())
 
  
-
